@@ -1,0 +1,7 @@
+{
+  "name": "hermes-subagents",
+  "version": "0.1.0",
+  "description": "Run copies of the Hermes agent (on a remote host over SSH) as parallel subagents from Claude Code.",
+  "author": { "name": "itaskaev2" },
+  "license": "MIT"
+}

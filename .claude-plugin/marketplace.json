@@ -1,0 +1,11 @@
+{
+  "name": "hermes-subagents",
+  "owner": { "name": "itaskaev2" },
+  "plugins": [
+    {
+      "name": "hermes-subagents",
+      "source": "./",
+      "description": "Run copies of the Hermes agent over SSH as parallel subagents."
+    }
+  ]
+}

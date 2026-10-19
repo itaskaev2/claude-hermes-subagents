@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "hermes": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/server/index.mjs"],
+      "env": {
+        "HERMES_SSH_HOST": "hermes.home.local",
+        "HERMES_BIN": "~/.local/bin/hermes"
+      }
+    }
+  }
+}
