@@ -54,9 +54,10 @@ function buildCommand(a) {
   if (a.yolo) parts.push("--yolo");
   parts.push("chat", "--query-file", "-", "-Q");
   const opt = (flag, v) => { if (v !== undefined && v !== "") parts.push(flag, q(v)); };
+  // Hermes rejects creation overrides on resume: the session keeps its original settings.
+  if (a.resume) return parts.concat("--resume", q(a.resume)).join(" ");
   opt("-t", a.toolsets); opt("-m", a.model); opt("--provider", a.provider);
   opt("--reasoning", a.reasoning); opt("-s", a.skills); opt("--in", a.workdir);
-  opt("--resume", a.resume);
   if (a.max_turns) parts.push("--max-turns", String(Math.floor(a.max_turns)));
   return parts.join(" ");
 }
